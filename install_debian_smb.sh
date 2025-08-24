@@ -6,7 +6,7 @@ apt-get install samba rsync git
 # Move updated config to /etc/samba and rename default
 newsmbconfig=$(pwd)/smb.conf
 cp /etc/samba/smb.conf /etc/samba/smb.conf.old
-rsync -rltDvz smb.conf /etc/samba/smb.conf 
+cp smb.conf /etc/samba/smb.conf 
 # Create SMB fileshare directory
 mkdir -p /srv/samba/sharedir
 # Create SMB user
